@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Room Navigation</title>
+  <link rel="stylesheet" href="System.css" />
+  <script defer src="System.js"></script>
+</head>
+<body>
+
+  <!-- Home Page -->
+  <a href="#roomLocation" onclick="showPage('roomOptions')">
+    <img src="sti-logo.png" alt="STI Logo" class="sti-logo">
+  </a>
+
+  <!-- Room Options Page -->
+  <div id="roomOptions" class="container hidden">
+    <div class="button-container">
+      <button class="nav-button" onclick="showPage('roomLocation')">Room Location</button>
+      <button class="nav-button" onclick="showPage('roomStatus')">Room Status</button>
+    </div>
+    <button class="return-button" onclick="showPage('home')">Return</button>
+  </div>
+
+  <!-- Room Location Page -->
+  <div id="roomLocation" class="container hidden">
+    <h2></h2>
+    <div class="room-container">
+      <div class="room" onclick="showPage('room209')">209</div>
+      <div class="room" onclick="showPage('room210')">210</div>
+      <div class="room" onclick="showPage('room211')">211</div>
+      <div class="room" onclick="showPage('room212')">212</div>
+    </div>
+    <button class="home-button" onclick="showPage('roomOptions')">Home</button>
+  </div>
+
+  <!-- Room Status Page -->
+<div id="roomStatus" class="container hidden">
+  <h2></h2>
+  <div class="room-container">
+    <div class="room" onclick="showPage('status209')">209 Status</div>
+    <div class="room" onclick="showPage('status210')">210 Status</div>
+    <div class="room" onclick="showPage('status211')">211 Status</div>
+    <div class="room" onclick="showPage('status212')">212 Status</div>
+  </div>
+  <button class="home-button" onclick="showPage('roomOptions')">Home</button>
+</div>
+
+  <!-- Individual Room Pages -->
+  <div id="room209" class="container hidden">
+    <h2>Room 209</h2>
+  <div class="top-buttons">
+    <button class="return-button" onclick="changeRoom('room209', 'roomLocation')">Return</button>
+    <button class="home-button" onclick="changeRoom('room209', 'home')">Home</button>
+  </div>
+  <video class="room-video" controls>
+    <source src="209.mp4" type="video/mp4">
+    
+  </video>
+</div>
+
+  <div id="room210" class="container hidden">
+    <div class="top-buttons">
+      <button class="return-button" onclick="changeRoom('room210', 'roomLocation')">Return</button>
+      <button class="home-button" onclick="changeRoom('room210', 'home')">Home</button>
+    </div>
+    <h2>Room 210</h2>
+    <video class="room-video" controls>
+    <source src="210.mp4" type="video/mp4">
+  </div>
+
+  <div id="room211" class="container hidden">
+    <div class="top-buttons">
+      <button class="return-button" onclick="changeRoom('room211', 'roomLocation')">Return</button>
+      <button class="home-button" onclick="changeRoom('room211', 'home')">Home</button>
+    </div>
+    <h2>Room 211</h2>
+    <video class="room-video" controls>
+    <source src="211.mp4" type="video/mp4">
+  </div>
+
+  <div id="room212" class="container hidden">
+    <div class="top-buttons">
+      <button class="return-button" onclick="changeRoom('room212', 'roomLocation')">Return</button>
+      <button class="home-button" onclick="changeRoom('room212', 'home')">Home</button>
+    </div>
+    <h2>Room 212</h2>
+    <video class="room-video" controls>
+    <source src="212.mp4" type="video/mp4">
+  </div>
+<div id="status209" class="container hidden">
+  <div class="top-buttons">
+    <button class="return-button" onclick="showPage('roomStatus')">Return</button>
+    <button class="home-button" onclick="showPage('home')">Home</button>
+  </div>
+  <h2>Status: Room 209</h2>
+    <iframe 
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQsWwQVvvYSugSSw2FZFHVGWKGSYkL0o2v-VZJjPmcGqR2cLkANU-sE-Dm6blJ0LK5G5fnHBMrNxH9U/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" 
+    frameborder="0">
+  </iframe>
+</div>
+
+<div id="status210" class="container hidden">
+  <div class="top-buttons">
+    <button class="return-button" onclick="showPage('roomStatus')">Return</button>
+    <button class="home-button" onclick="showPage('home')">Home</button>
+  </div>
+  <h2>Status: Room 210</h2>
+  <iframe 
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRx4sh0hRbMqCz4KdTKiMioCuhc9wKXA4tmstHxYJfF9zQZkMbj0GeNmN76bToGPCzkyQc-eOLQuRwx/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" 
+    frameborder="0">
+  </iframe>
+</div>
+
+<div id="status211" class="container hidden">
+  <div class="top-buttons">
+    <button class="return-button" onclick="showPage('roomStatus')">Return</button>
+    <button class="home-button" onclick="showPage('home')">Home</button>
+  </div>
+  <h2>Status: Room 211</h2>
+  <iframe 
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRmCf_hSsPBwh1AlLNgZK6ZrkNNka4k6SuwRdqICGGUYBm_94VNzjkhYUrMCmtXgY2tuvw5VHoSs24n/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" 
+    frameborder="0">
+  </iframe>
+</div>
+
+<div id="status212" class="container hidden">
+  <div class="top-buttons">
+    <button class="return-button" onclick="showPage('roomStatus')">Return</button>
+    <button class="home-button" onclick="showPage('home')">Home</button>
+  </div>
+  <h2>Status: Room 212</h2>
+  <iframe 
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRUxiwa5l3yKxdKTuvFNlGuwOHNnb06XH5CIckfYdAsFnD0HEUiKDLl9isuhb7yUTdVCID8AEh33uuB/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" 
+    frameborder="0">
+  </iframe>
+</div>
+
+ 
+  
+</body>
+</html>
